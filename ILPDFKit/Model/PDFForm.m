@@ -247,6 +247,15 @@
         UIGraphicsPopContext();
     } else if (self.formType == PDFFormTypeButton) {
         [PDFFormButtonField drawWithRect:rect context:ctx back:NO selected:[self.value isEqualToString:self.exportValue] && (_flags & PDFFormFlagButtonPushButton) == 0 radio:(_flags & PDFFormFlagButtonRadio) > 0];
+    } else if (self.formType == PDFFormTypeSignature) {
+        UIGraphicsPushContext(ctx);
+
+        NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:self.value options:0];
+
+        UIImage* image = [UIImage imageWithData:decodedData];
+        [image drawInRect: CGRectMake(0, 0, rect.size.width, (rect.size.width * image.size.height) / image.size.width)];
+        
+        UIGraphicsPopContext();
     }
 }
 
