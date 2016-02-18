@@ -38,7 +38,7 @@
 #pragma mark - PDFView
 
 - (instancetype)initWithFrame:(CGRect)frame dataOrPath:(id)dataOrPath additionViews:(NSArray*)widgetAnnotationViews {
-    self = [super initWithFrame:frame];
+    self = [self initWithFrame:frame];
     if (self) {
         CGRect contentFrame = CGRectMake(0, 0, frame.size.width, frame.size.height);
         _pdfView = [[UIWebView alloc] initWithFrame:contentFrame];

@@ -52,7 +52,7 @@
 #pragma mark - PDFStream
 
 - (instancetype)initWithStream:(CGPDFStreamRef)pstrm {
-    self = [super init];
+    self = [self init];
     if (self != nil) {
         _strm = pstrm;
     }

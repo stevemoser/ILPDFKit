@@ -50,7 +50,7 @@
  @param parr A CGPDFArrayRef representing the PDF array.
  @return A new PDFArray object. Initialization in memory occurs when the instance receives value based query.
  */
-- (instancetype)initWithArray:(CGPDFArrayRef)parr NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithArray:(CGPDFArrayRef)parr;
 
 /**---------------------------------------------------------------------------------------
  * @name Rectangle Arrays

@@ -42,7 +42,7 @@
  @param parent The PDFDocument that owns the PDFFormContainer.
  @return A new PDFFormContainer object.
  */
-- (instancetype)initWithParentDocument:(PDFDocument *)parent NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithParentDocument:(PDFDocument *)parent;
 
 /**---------------------------------------------------------------------------------------
  * @name Retrieving Forms

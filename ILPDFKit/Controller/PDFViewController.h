@@ -53,21 +53,21 @@
  @return A new instance of PDFViewController initialized with data.
  */
 
-- (instancetype)initWithData:(NSData *)data NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithData:(NSData *)data;
 
 /** Creates a new instance of PDFViewController.
  
  @param name Resource to load.
  @return A new instance of PDFViewController initialized with a PDF resource named name.
  */
-- (instancetype)initWithResource:(NSString *)name NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithResource:(NSString *)name;
 
 /** Creates a new instance of PDFViewController.
  
  @param path Points to PDF file to load.
  @return A new instance of PDFViewController initialized with a PDF located at path.
  */
-- (instancetype)initWithPath:(NSString *)path NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithPath:(NSString *)path;
 
 /**---------------------------------------------------------------------------------------
  * @name Reloading Content
