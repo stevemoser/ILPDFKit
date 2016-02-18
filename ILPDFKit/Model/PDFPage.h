@@ -46,7 +46,7 @@
  @param pg A CGPDFPageRef representing the PDF page.
  @return A new PDFPage object. 
  */
-- (instancetype)initWithPage:(CGPDFPageRef)pg NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithPage:(CGPDFPageRef)pg;
 
 /** Returns the thumbnail image.
  @return The thumbnail image as a UIImage or nil if no such image exists.

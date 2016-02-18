@@ -80,7 +80,7 @@
 #pragma mark - Initialization
 
 - (instancetype)initWithFrame:(CGRect)frame radio:(BOOL)rad {
-    self = [super initWithFrame:frame];
+    self = [self initWithFrame:frame];
     if (self) {
         _radio = rad;
         self.opaque = NO;

@@ -52,7 +52,7 @@
 #pragma mark - Initialization
 
 - (instancetype)initWithFieldDictionary:(PDFDictionary *)leaf page:(PDFPage *)pg parent:(PDFFormContainer *)p {
-    self = [super init];
+    self = [self init];
     if (self != nil) {
         _dictionary = leaf;
         id value = [leaf inheritableValueForKey:@"V"];

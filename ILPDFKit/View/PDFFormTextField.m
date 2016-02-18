@@ -45,7 +45,7 @@
 #pragma mark - PDFFormTextField
 
 - (instancetype)initWithFrame:(CGRect)frame multiline:(BOOL)multiline alignment:(NSTextAlignment)alignment secureEntry:(BOOL)secureEntry readOnly:(BOOL)ro {
-    self = [super initWithFrame:frame];
+    self = [self initWithFrame:frame];
     if (self != nil) {
         self.opaque = NO;
         self.backgroundColor = ro ? [UIColor clearColor]:PDFWidgetColor;

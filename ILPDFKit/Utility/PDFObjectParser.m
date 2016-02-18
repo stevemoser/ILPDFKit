@@ -45,7 +45,7 @@ typedef struct {
 }
 
 - (instancetype)initWithBytes:(NSData *)bytes {
-    self = [super init];
+    self = [self init];
     if (self != nil) {
         NSString *strg = [PDFUtility trimmedStringFromPDFData:bytes];
         if ([strg characterAtIndex:0] == '<') {

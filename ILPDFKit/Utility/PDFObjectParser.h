@@ -55,7 +55,7 @@ As an example:
  @discussion The byte sequence should be identical to how it appears in a PDF file.
  @return self.
  */
-- (instancetype)initWithBytes:(NSData *)bytes NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithBytes:(NSData *)bytes;
 
 /** Creates an instance of PDFObjectParser initialized with a sequence of bytes.
  @param bytes The byte sequence of the object to parse as it appears in a PDF file.

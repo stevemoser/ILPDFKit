@@ -78,7 +78,7 @@ void checkKeys(const char *key,CGPDFObjectRef value,void *info) {
 #pragma mark - PDFDictionary
 
 - (instancetype)initWithDictionary:(CGPDFDictionaryRef)pdict {
-    self = [super init];
+    self = [self init];
     if (self != nil) {
         _dict = pdict;
     }

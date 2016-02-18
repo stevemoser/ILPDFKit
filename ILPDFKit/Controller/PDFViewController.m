@@ -108,10 +108,10 @@
     static const float PDFLandscapePhoneHMargin = 6.5f;
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation))return CGPointMake(PDFPortraitPadWMargin,PDFPortraitPadHMargin);
+        if (UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation]))return CGPointMake(PDFPortraitPadWMargin,PDFPortraitPadHMargin);
         else return CGPointMake(PDFLandscapePadWMargin,PDFLandscapePadHMargin);
     } else {
-        if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation))return CGPointMake(PDFPortraitPhoneWMargin,PDFPortraitPhoneHMargin);
+        if (UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation]))return CGPointMake(PDFPortraitPhoneWMargin,PDFPortraitPhoneHMargin);
         else return CGPointMake(PDFLandscapePhoneWMargin,PDFLandscapePhoneHMargin);
     }
 }

@@ -61,7 +61,7 @@
 #pragma mark - PDFFormChoiceField
 
 - (instancetype)initWithFrame:(CGRect)frame options:(NSArray *)opt {
-    self = [super initWithFrame:frame];
+    self = [self initWithFrame:frame];
     if (self != nil) {
         self.opaque = NO;
         self.backgroundColor = [PDFWidgetColor colorWithAlphaComponent:1];

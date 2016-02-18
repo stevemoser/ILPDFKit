@@ -72,7 +72,7 @@ static void renderPage(NSUInteger page, CGContextRef ctx, CGPDFDocumentRef doc, 
 #pragma mark - PDFDocument
 
 - (instancetype)initWithData:(NSData *)data {
-    self = [super init];
+    self = [self init];
     if (self != nil) {
         _document = [PDFUtility createPDFDocumentRefFromData:data];
         _documentData = [[NSMutableData alloc] initWithData:data];
@@ -81,7 +81,7 @@ static void renderPage(NSUInteger page, CGContextRef ctx, CGPDFDocumentRef doc, 
 }
 
 - (instancetype)initWithResource:(NSString *)name {
-    self = [super init];
+    self = [self init];
     if (self != nil) {
         if ([[[name componentsSeparatedByString:@"."] lastObject] isEqualToString:@"pdf"])
             name = [name substringToIndex:name.length-4];
@@ -92,7 +92,7 @@ static void renderPage(NSUInteger page, CGContextRef ctx, CGPDFDocumentRef doc, 
 }
 
 - (instancetype)initWithPath:(NSString *)path {
-    self = [super init];
+    self = [self init];
     if (self != nil) {
         _document = [PDFUtility createPDFDocumentRefFromPath:path];
         _documentPath = path;

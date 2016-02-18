@@ -56,7 +56,7 @@
  @param pdict A CGPDFDictionaryRef representing the PDF dictionary.
  @return A new PDFDictionary object. Initialization in memory occurs when the instance receives a key or value based query.
  */
-- (instancetype)initWithDictionary:(CGPDFDictionaryRef)pdict NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithDictionary:(CGPDFDictionaryRef)pdict;
 
 
 /** Merges the receiver's elements with the elements of changes.

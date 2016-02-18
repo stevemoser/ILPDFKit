@@ -68,7 +68,7 @@
  @param pstrm A CGPDFStreamRef representing the PDF stream.
  @return A new PDFStream object.
  */
-- (instancetype)initWithStream:(CGPDFStreamRef)pstrm NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithStream:(CGPDFStreamRef)pstrm;
 
 /**---------------------------------------------------------------------------------------
  * @name Comparing Streams

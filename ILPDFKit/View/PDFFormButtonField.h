@@ -63,7 +63,7 @@
  @param rad YES if a radio button, otherwise NO.
  @return A new PDFFormButtonField object.
  */
-- (instancetype)initWithFrame:(CGRect)frame radio:(BOOL)rad NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithFrame:(CGRect)frame radio:(BOOL)rad;
 
 /**---------------------------------------------------------------------------------------
  * @name Post Initialization

@@ -43,7 +43,7 @@
 #pragma mark - Initialization
 
 - (instancetype)initWithParentDocument:(PDFDocument *)parent {
-    self = [super init];
+    self = [self init];
     if (self != nil) {
         _allForms = [[NSMutableArray alloc] init];
         _nameTree = [[NSMutableDictionary alloc] init];

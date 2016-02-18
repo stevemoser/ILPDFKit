@@ -54,7 +54,7 @@
  @return A new instance of PDFView.
  */
 
-- (instancetype)initWithFrame:(CGRect)frame dataOrPath:(id)dataOrPath additionViews:(NSArray *)widgetAnnotationViews NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithFrame:(CGRect)frame dataOrPath:(id)dataOrPath additionViews:(NSArray *)widgetAnnotationViews;
 
 /**---------------------------------------------------------------------------------------
  * @name Adding and Removing Additions
