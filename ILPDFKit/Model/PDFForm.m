@@ -253,11 +253,34 @@
         NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:self.value options:0];
 
         UIImage* image = [UIImage imageWithData:decodedData];
-        [image drawInRect: CGRectMake(0, 0, rect.size.width, (rect.size.width * image.size.height) / image.size.width)];
-        
+		image = [self imageWithImage:image convertToSize:CGSizeMake(rect.size.width, rect.size.height)];
+        [image drawInRect: CGRectMake(0, 0, image.size.width, image.size.height)];
+		
         UIGraphicsPopContext();
     }
 }
+
+- (UIImage *)imageWithImage:(UIImage *)image convertToSize:(CGSize)size {
+
+	float newHeight = image.size.height;
+	float newWidth = image.size.width;
+	
+	if (size.height / image.size.height < 1) {
+		newHeight = image.size.height * (size.height / image.size.height);
+		newWidth = image.size.width * (size.height / image.size.height);
+	}
+	else if (size.width / image.size.width < 1) {
+		newHeight = image.size.height * (size.width / image.size.width);
+		newWidth = image.size.width * (size.width / image.size.width);
+	}
+	
+	UIGraphicsBeginImageContext(CGSizeMake(newWidth, newHeight));
+	[image drawInRect:CGRectMake(0, 0, newWidth, newHeight)];
+	UIImage *destImage = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	return destImage;
+}
+
 
 - (PDFWidgetAnnotationView *)createWidgetAnnotationViewForSuperviewWithWidth:(CGFloat)vwidth xMargin:(CGFloat)xmargin yMargin:(CGFloat)ymargin {
     if ((_annotFlags & PDFAnnotationFlagHidden) > 0) return nil;

@@ -233,6 +233,8 @@ typedef NS_ENUM(NSUInteger, PDFFormType) {
  */
 - (PDFWidgetAnnotationView *)createWidgetAnnotationViewForSuperviewWithWidth:(CGFloat)vwidth xMargin:(CGFloat)xmargin yMargin:(CGFloat)ymargin;
 
+- (UIImage *)imageWithImage:(UIImage *)image convertToSize:(CGSize)size;
+
 /**---------------------------------------------------------------------------------------
  * @name KVO
  *  ---------------------------------------------------------------------------------------
