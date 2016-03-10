@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
 #import "PDFObject.h"
 
 /** The PDFArray class encapsulates a PDF array object contained in a PDFDocument.
